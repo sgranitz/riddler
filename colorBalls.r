@@ -11,16 +11,16 @@
 library(ggplot2)
 
 # Input
-numColors <- 4
-numBalls  <- 4
-numTrials <- 25000
+num_colors <- 4
+num_balls  <- 4
+num_trials <- 25000
 
 # Code
-rpl <- numBalls > numColors
-num_turns <- numeric(numTrials)
+rpl <- num_balls > num_colors
+num_turns <- numeric(num_trials)
 
-for (i in 1:numTrials) {
-  a <- sample(1:numColors, numBalls, replace = rpl)
+for (i in 1:num_trials) {
+  a <- sample(1:num_colors, num_balls, replace = rpl)
   count <- 0
   while(!isTRUE(all.equal(min(a), max(a)))) {
     b  <- sample(a, 2, replace = FALSE)
