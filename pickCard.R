@@ -18,7 +18,7 @@ no_turns <-  10
 cards <- no_cards:1
 turns <- no_turns:1
 
-# If current card is not you high card then continue picking
+# If current card is not your high card then continue picking
 # Otherwise if current card is your high card:
 
 y <- matrix(NA, nrow = max(turns), ncol = max(cards))
